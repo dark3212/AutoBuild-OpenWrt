@@ -85,6 +85,13 @@ jobs:
         cd package/lean
         rm -rf luci-theme-argon
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+   
+    - name: netdata
+      working-directory: ./openwrt
+      run: |
+        cd package/lean
+        rm -rf luci-app-netdata
+        git clone https://github.com/sirpdboy/luci-app-netdata.git
 
     - name: 配置自定义架构 - Build_x86_64
       env:
@@ -101,7 +108,7 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
-    - name: 构建固件
+    - name: 编译固件
       working-directory: ./openwrt
       run: |
         echo -e "$(nproc) thread build."
