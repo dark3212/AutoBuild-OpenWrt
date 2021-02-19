@@ -86,6 +86,13 @@ jobs:
         rm -rf luci-theme-argon
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
         
+    - name: netdata汉化
+      working-directory: ./openwrt
+      run: |
+        cd package/lean
+        rm -rf luci-app-netdata
+        git clone https://github.com/sirpdboy/luci-app-netdata.git
+        
     - name: 配置自定义架构 - Build_x86_64
       env:
         CONFIG_FILE: 'x86_64.config'
