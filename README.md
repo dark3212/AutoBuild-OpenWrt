@@ -4,26 +4,28 @@
 ![GitHub Forks](https://img.shields.io/github/forks/esirplayground/AutoBuild-OpenWrt.svg?style=flat&logo=appveyor&label=Forks&logo=github)
 ![GitHub last commit](https://img.shields.io/github/last-commit/esirplayground/AutoBuild-OpenWrt?label=Latest%20Commit&logo=github)
 
-Build OpenWrt firware [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) using GitHub Actions  
-Hereby thank P3TERX for his amazing job: https://github.com/P3TERX/Actions-OpenWrt/  
+使用GitHub Actions构建OpenWrt固件精益的OpenWrt，
+特此感谢P3TERX的出色工作：https://github.com/P3TERX/Actions-OpenWrt/
 
-Hereby thank KFERMercer for his amazing job: https://github.com/KFERMercer/OpenWrt-CI  
-You could edit and enable "Sync Code" YAML file to let your forked repo keep updated.
+在此，感谢KFERMercer所做的出色工作：https://github.com/KFERMercer/OpenWrt-CI
+您可以编辑并启用“同步代码” YAML文件，以使您的分叉存储库保持更新。
 
-## Usage
-**1. Prerequisite**
-  - Sign up for [GitHub Actions](https://github.com/features/actions/signup)
-  - Fork [this GitHub repository](https://github.com/esirplayground/AutoBuild-OpenWrt)
-    
-**2. Compile Firmware**
-  - Click `[.github/workflows]` folder on the top of repo and you could see few workflow files, Each for one particular architecture(device).
-  - Edit the workflow file you desire，uncomment push section 3 lines together and submit the commit.(Other 2 methods wait you to discover)
-  - The build starts automatically. Progress can be viewed on the Actions page.
-  - When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
-  - Default Web Admin IP: `192.168.5.1`, username `root`，password `password`
+感谢eSir所做的出色工作：https://github.com/esirplayground/AutoBuild-OpenWrt
 
-**3. Sync Code**
-  - Uncomment 'push-branches-master' 3 lines under **`On`** section and commit changes to let the script sync the code once for you.
-  - Uncomment 'schedule-cron' 2 lines under **`On`** section and commit changes to let the script sync the code everyday on 3 am[UTC +8]
+用法
+1.前提条件
 
-[For the details please visit my Y2B Channel (in Chinese) | 视频教程](https://www.youtube.com/c/esirplayground)
+注册GitHub动作
+分叉此GitHub存储库
+2.编译固件
+
+单击[.github/workflows]仓库顶部的文件夹，您会看到很少的工作流文件，每个文件用于一个特定的体系结构（设备）。
+编辑所需的工作流文件，取消注释将第3行挤在一起并提交提交。（其他2种方法等待您发现）
+构建将自动开始。可以在“操作”页面上查看进度。
+构建完成后，单击Artifacts“操作”页面右上角的按钮以下载二进制文件。
+默认的Web管理员IP 192.168.5.1：，用户名root，密码password
+3.同步码
+
+取消注释“ push-branches-master”On部分下的3行，并提交更改，以使脚本一次为您同步代码。
+取消注释“ schedule-cron”两On节，并提交更改以使脚本每天凌晨3点同步代码[UTC +8]
+有关详细信息，请访问我的Y2B频道（中文）| 视频教程(https://www.youtube.com/c/esirplayground)
